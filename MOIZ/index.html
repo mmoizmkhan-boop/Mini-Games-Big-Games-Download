@@ -1,11 +1,32 @@
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#080010">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script>
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js")
-            .catch(error => console.log(error));
-    });
-}
-</script>
+    <title>My Gaming Website</title>
+
+    <!-- PWA SETTINGS -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#080010">
+
+    <!-- YOUR CSS FILE -->
+    <link rel="stylesheet" href="Practice.CSS">
+</head>
+<body>
+
+    <!-- YOUR EXISTING WEBSITE HTML GOES HERE -->
+
+
+    <!-- PWA SERVICE WORKER -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./sw.js")
+                    .catch(error => console.log(error));
+            });
+        }
+    </script>
+
+</body>
+</html>
