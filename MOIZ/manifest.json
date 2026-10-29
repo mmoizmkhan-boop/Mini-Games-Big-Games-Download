@@ -1,0 +1,22 @@
+{
+  "name": "My Gaming Website",
+  "short_name": "MyGames",
+  "description": "My neon gaming website",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080010",
+  "theme_color": "#ff00cc",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#080010">
+
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+            .catch(error => console.log(error));
+    });
+}
+</script>
