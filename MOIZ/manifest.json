@@ -1,7 +1,8 @@
+
 {
   "name": "My Gaming Website",
   "short_name": "MyGames",
-  "description": "My neon gaming website",
+  "description": "My gaming website",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
