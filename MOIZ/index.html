@@ -1,32 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Gaming Website</title>
-
-    <!-- PWA SETTINGS -->
-    <link rel="manifest" href="manifest.json">
+    <title>Mini Games | Big Games Download</title>
     <meta name="theme-color" content="#080010">
+    <meta name="description" content="Play mini games and discover big games to download.">
 
-    <!-- YOUR CSS FILE -->
-    <link rel="stylesheet" href="Practice.CSS">
+    <link rel="stylesheet" href="./Practice.CSS">
+    <link rel="manifest" href="./manifest.json">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            background: #080010;
+            overflow-x: hidden;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            min-height: 700px;
+            border: none;
+            background: transparent;
+        }
+    </style>
 </head>
+
 <body>
+    <iframe
+        src="./Practice.html"
+        title="Mini Games and Big Games Download"
+        allowfullscreen>
+    </iframe>
 
-    <!-- YOUR EXISTING WEBSITE HTML GOES HERE -->
-
-
-    <!-- PWA SERVICE WORKER -->
     <script>
         if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
+            window.addEventListener("load", function () {
                 navigator.serviceWorker.register("./sw.js")
-                    .catch(error => console.log(error));
+                    .catch(function (error) {
+                        console.error("Service worker error:", error);
+                    });
             });
         }
     </script>
-
 </body>
 </html>
+
